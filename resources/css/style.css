@@ -1,0 +1,393 @@
+/*-----------------------------------------------------------------------------------
+//Basic Setup
+//-----------------------------------------------------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    background-color: #000000;
+    color: #d4d4d4;
+    font-family: 'Lato','Arial',sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+/*//-----------------------------------------------------------------------------------
+//Resusable components
+//-------------------------------------------------------------------------------------*/
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section{
+    padding: 80px 0;
+}
+
+.box{
+    padding: 1%;
+}
+/*//-----------------------------------------------------------------------------------
+//Headings
+//-----------------------------------------------------------------------------------*/
+
+h1,
+h2,
+h3,
+h4{
+    
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px ;
+    font-family: 'Anton', 'Arial',sans-serif;
+}
+
+h1{
+    margin: 0;
+    margin-bottom: 40px;
+    color: #ffffff;
+    font-size: 240%;
+    word-spacing: 4px;
+} 
+
+h2{
+   font-size: 180%;
+   word-spacing: 2px;
+   text-align: center;
+   margin-bottom: 30px; 
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color:#ce0a00;
+    content: "";
+    width: 160px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+h3{
+    font-size: 120%;
+    margin: 10px 0;
+    color: #ce0a00;
+    border-bottom: solid #ce0a00;
+    border-width: 2px;
+    
+}
+
+/*-----------------------------------------------------------------------------------
+Paragraphs
+-----------------------------------------------------------------------------------*/
+
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+}
+
+/*-----------------------------------------------------------------------------------
+Icons
+-----------------------------------------------------------------------------------*/
+
+.icons {
+    font-size: 150%;
+    display: block;
+    color: rgb(212, 212, 212);
+    margin: 20px 0;
+    transition: color 0.2s;
+}
+
+/*//-----------------------------------------------------------------------------------
+//Buttons
+//-----------------------------------------------------------------------------------*/
+
+.btn:link,
+.btn:visited{
+     display: inline-block;
+     padding: 10px 30px;
+     font-weight: 300;
+     text-decoration:none;
+     border-radius: 100px;
+     transition: background-color 0.2s,border 0.2s,color 0.2s ;
+}
+.btn-full:link,
+.btn-full:visited{
+    background-color: #ce0a00;
+    border: 1px solid #ce0a00;
+    color: #ffffff;
+    margin-right: 15px;
+    
+}
+.btn-ghost:link,
+.btn-ghost:visited{
+    border: 1px solid #ce0a00;
+    color: #ce0a00;
+}
+.btn:hover,
+.btn:active{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration:none;
+    border-radius: 100px;
+    background-color: #ac0800;
+    border: 1px solid #ac0800;
+    color: #ffffff;
+}
+
+.search-icon{
+    font-size: 100%;
+    color: #ffffff;
+    border-radius: 3px;
+    padding: 8px 8px;
+    transition: background-color 0.2s;
+    background-color:#ce0a00 
+}
+.search-icon:hover{
+    background-color:#ac0800;
+    border-width: 1px;
+    border-color: #ac0800; 
+}
+.main-nav .search-icon-box:link,
+.main-nav .search-icon-box:active,
+.main-nav .search-icon-box:hover{
+    border-bottom-width: 0px;
+}
+
+.subscribe-btn{
+    display: inline-block;
+    width: 25%;
+    color: white;
+    padding: 12px 5px;
+    text-align: center;
+    font-weight: 300;
+    text-decoration:none;
+    border-radius: 4px;
+    background-color: #ce0a00;
+    transition: background-color 0.2s,border 0.2s,color 0.2s ;
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:active{
+   background-color: #ac0800;
+}
+
+/*//-----------------------------------------------------------------------------------
+//Headers
+//-----------------------------------------------------------------------------------*/
+
+header{
+   
+    background-image: linear-gradient(rgba(0, 0, 0, .9),rgba(0, 0, 0, 0.6)),url(cover2.jpg);
+    background-size: cover ;
+    background-position-x: center ;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.main-text-box{
+    position: absolute;
+    width: 1140px;
+    top:50%;
+    left:50%;  
+    transform: translate(-50%,-50%);
+}
+/*-----------------------------------------------------------------------------------
+Logo
+-----------------------------------------------------------------------------------*/
+.logo{
+    height: 60px;
+    width:auto;
+    float: left;
+    margin-top: 40px;
+}
+
+/*-----------------------------------------------------------------------------------
+Main Navigation
+-----------------------------------------------------------------------------------*/
+
+.main-nav{
+    float: right;
+    list-style: none;
+    margin-top: 50px;
+}
+
+.main-nav li{
+     display: inline-block;
+     margin-left: 40px;
+    padding-bottom: px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited{
+    text-decoration:none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 90%;
+    transition: border-bottom 0.2s;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0;   
+    
+}
+
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 2px solid #ce0a00;
+    padding: 10px 0px;
+    padding-bottom: 10px;
+}
+
+.main-nav input[type=text]{
+    float: left;
+    padding: 0px 10px;
+    border-style:solid;
+    padding-bottom: 5px;
+    border-radius: 3px;
+    transition: border-color 0.2s;
+    color: rgb(82, 82, 82);
+  }
+
+.main-nav input[type=text]:hover{
+    border-color: #ce0a00;
+  }
+/*-----------------------------------------------------------------------------------
+Creators
+-----------------------------------------------------------------------------------*/
+
+.creator-pic{
+    margin-bottom: 10px;
+    width: 100%;
+    margin:0;
+    overflow: hidden;
+    display: block;
+}
+
+.creator-pic img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/*-----------------------------------------------------------------------------------
+Movies
+-----------------------------------------------------------------------------------*/
+.section-movies{
+    padding-bottom: 10%;
+    background-color: black;
+}
+
+.movie-pic{
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+    display: block;
+}
+
+.movie-pic img{
+    
+    opacity: 0.6;
+    width: 50%;
+    margin:0 25%;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+    margin-bottom: 10px;
+}
+
+.movie-pic img:hover{
+    width: 50%;
+    height: auto;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.movie-names{
+    color: rgb(212, 212, 212);;
+    border: none;
+    text-align: center;
+}
+
+.movie-para{
+    text-align: justify;
+}
+
+
+/*-----------------------------------------------------------------------------------
+Footer
+-----------------------------------------------------------------------------------*/
+footer{
+    background-color: rgba(17, 17, 17, 0.863);
+    padding-bottom: 50px;
+}
+footer h4{
+    margin-top: 100px;;
+}
+
+.social{
+    float: left;
+    list-style: none;
+    margin-top: 75px;
+}
+
+.social li{
+    display: inline-block;
+    padding-left: 40px;
+}
+
+.social .mail:hover{
+    color: #ffffff;
+}
+
+.social .twitter:hover{
+    color: #1e6dff;
+}
+
+.social .yt:hover{
+    color: #e21111;
+}
+
+.social .fb:hover{
+    color: #00308a;
+}
+
+.social .insta:hover{
+    color: #d802bb;
+}
+
+footer input[type=email]{
+    width: 65%; 
+    height: 40%;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+    color: #313131;
+    border-style: solid;
+    border-radius: 4px;
+    transition: border-color 0.2s;
+}
+
+footer input[type=email]:hover{
+    border-color: #ce0a00;
+}
+
+footer .refer{
+    font-size: 70%;
+}
+
+footer .refer li{
+    list-style: none;
+    padding-bottom: 5px;
+}
+
+footer .refer li a{
+    text-decoration: none;
+    color: #d4d4d4;
+}
+
+footer .refer li a:hover{
+    color: white;
+}
